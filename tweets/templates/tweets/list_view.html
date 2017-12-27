@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+	
+	% for object in object_list %}
+		<p>{{ object.content }}<br/>
+		{{ object.user }}<br/>
+		{{ object.timestamp|timesince }} ago</p><br/>
+
+{% endfor %}
+
+{% endblock content %}{
+
