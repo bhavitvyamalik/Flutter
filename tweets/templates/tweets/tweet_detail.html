@@ -1,10 +1,84 @@
 {% extends "base.html" %}
 
 
+{% block script %}
+<script>
+$(document).ready(function(){
+  loadTweetContainer("tweet-container", {{ object.id }})
+});
+</script>
+{% endblock script %}
+
 {% block content %}
-	
-	{{ object.content }}<br/>
-	{{ object.user }}<br/>
-	{{ object.timestamp|timesince }}<br/>
+<div class='row'>
+    <div class='col-sm-3 col-xs-12' style='background-color:yellow;'>
+        <h1>{{ object.user }} </h1>
+    </div>
+    <div class='col-sm-9 col-xs-12'>
+        <div id='tweet-container'>
+        </div>
+    </div>
+
+</div>
 
 {% endblock content %}
+
+
+
+
+
+
+
+
+
+<div class='row'>
+    <div class='col-lg-3 col-md-6 col-sm-3 col-xs-12' style='background-color:red;'>
+        {{ object.user }}
+    </div>
+    <div class='col-md-6' >
+        {{ object.user }}
+    </div>
+    <div class='col-xs-12' style='background-color:green;'>
+        {{ object.user }}
+    </div>
+    <div class='col-xs-12' style='background-color:blue;'>
+        {{ object.user }}
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class='row'>
+
+
+      <div class='col-sm-1' style='background-color:red;'>
+        {{ object.user }}
+    </div>
+    <div class='col-sm-1' style='background-color:yellow;'>
+        {{ object.user }}
+    </div>
+    <div class='col-sm-1' style='background-color:green;'>
+        {{ object.user }}
+    </div>
+
+    <div class='col-sm-1' style='background-color:blue;'>
+        {{ object.user }}
+    </div>
+      <div class='col-sm-1' style='background-color:red;'>
+        {{ object.user }}
+    </div>
+    <div class='col-sm-1' style='background-color:yellow;'>
+        {{ object.user }}
+    </div>
+    <div class='col-sm-1' style='background-color:green;'>
+        {{ object.user }}
+    </div>
+
+    <div class='col-sm-1' style='background-color:blue;'>
+
+    </div>
+
+</div>

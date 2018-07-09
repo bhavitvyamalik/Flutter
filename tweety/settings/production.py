@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'rest_framework',
+    'accounts',
+    'hashtags',
+    'tweets',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +55,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'tweety.urls'
+LOGIN_URL = "/login/"
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = LOGIN_REDIRECT_URL
 
 TEMPLATES = [
     {
